@@ -10,6 +10,7 @@ class CarManager():
         self.allcars = []
         self.car_speed = STARTING_MOVE_DISTANCE
         self.create_car()
+        
 
     def create_car(self):
         car = t.Turtle()
@@ -24,6 +25,16 @@ class CarManager():
     def car_move(self):
         for i in self.allcars:
             i.forward(self.car_speed)
+
+    def crash_car(self, player_xpos, player_ypos):
+        for i in self.allcars:
+            if - 20 < player_ypos - i.ycor() and -30 < player_xpos - i.xcor() < 30:
+                print("yeuii")
+                return True
+        return False
+                
+
+        
 
     
 
