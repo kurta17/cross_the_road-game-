@@ -25,6 +25,10 @@ class Scoreboard(Turtle):
         self.print_level()
         update()
         self.clear()
+    
+    def reset_level(self):
+        self.level = 0
+        self.print_level()
         
 
     
