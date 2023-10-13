@@ -1,4 +1,5 @@
 from turtle import Turtle
+import time
 FONT = ("Courier", 24, "normal")
 
 
@@ -13,8 +14,17 @@ class Scoreboard(Turtle):
 
 
     def print_level(self):
+        self.goto(-200,250)
         self.clear()
         self.write(f"LEVEL: {self.level}", align="center", font=FONT)
+
+    def game_over(self, update):
+        self.goto(0,0)
+        self.write("Game Over", align="center", font=("Arial", 40, "normal"))
+        time.sleep(1)
+        self.print_level()
+        update()
+        self.clear()
         
 
     
