@@ -29,7 +29,6 @@ class CarManager():
     def crash_car(self, player_xpos, player_ypos):
         for i in self.allcars:
             if - 20 < player_ypos - i.ycor() and -30 < player_xpos - i.xcor() < 30:
-                print("yeuii")
                 return True
         return False
                 

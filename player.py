@@ -11,11 +11,15 @@ class Player(t.Turtle):
         self.color("black")
         self.penup()
         self.goto(STARTING_POSITION)
-
-    def move(self):
         self.setheading(90)
+
+    def move_up(self):
         x = self.xcor()
         y = self.ycor()
-        self.goto(x,y + MOVE_DISTANCE)
+        if self.ycor() < 320:
+            self.goto(x,y + MOVE_DISTANCE)
+
+    def go_start_pos(self):
+        self.goto(STARTING_POSITION)
         
 
