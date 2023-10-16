@@ -19,7 +19,7 @@ class CarManager():
             self.move_count += 1
 
     def create_car(self):
-        if self.move_count % 10 == 0:
+        if self.move_count % 15 == 0:
             car = t.Turtle()
             car.shape("square")
             car.shapesize(stretch_wid=1,stretch_len=2)
