@@ -33,10 +33,10 @@ while game_is_on:
     cars.car_move()
     cars.create_car()
     if cars.crash_car(player_xpos=player.xcor(), player_ypos=player.ycor()):
-        screen.tracer(1)
+        # screen.tracer(1)
         level.game_over(screen.update)
         player.go_start_pos()
-        screen.tracer(0)
+        # screen.tracer(0)
         cars.reset_cars()
         level.reset_level()
         screen.update()
